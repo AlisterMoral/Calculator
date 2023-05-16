@@ -35,10 +35,3 @@ function operate (operator, num1, num2){
          return "Invalid operator";
     }
 }
-console.log(operate('+', 6, 6));    // should be 12 
-console.log(operate('-', 10, 4));   // should be 6
-console.log(operate('*', 2, 6));    // should be 12
-console.log(operate('/', 15, 3));   // should be  5
-console.log(operate('@', 10, 2));   //  Invalid operator
-
-//works for now !
