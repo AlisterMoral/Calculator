@@ -51,22 +51,19 @@ function handleNumberClick(number) {
     updateDisplay(number);
 }
 
-  function handleOperatorClick(selectedOperator) {
-    if (operator === "" && firstNumber === "") {
-      firstNumber = displayValue;
-      operator = selectedOperator;
-      clearDisplay();
-    } else if (operator !== "" && firstNumber !== "") {
+function handleEqualClick() {
+    if (operator !== "" && firstNumber !== "" && displayValue !== "") {
       secondNumber = displayValue;
       const result = operate(operator, Number(firstNumber), Number(secondNumber));
       displayValue = String(result);
       document.getElementById("display").textContent = displayValue;
       firstNumber = displayValue;
-      operator = selectedOperator;
+      operator = "";
       secondNumber = "";
+      newCalculation = true;
     }
-}
-  
+  }
+
 function handleEqualClick() {
     if (operator !== "" && firstNumber !== "" && displayValue !== "") {
       secondNumber = displayValue;
@@ -78,6 +75,22 @@ function handleEqualClick() {
       secondNumber = "";
     }
 }
+
+function handleOperatorClick(selectedOperator) {
+    if (operator === "" && firstNumber === "") {
+      firstNumber = displayValue;
+      operator = selectedOperator;
+      clearDisplay();
+    } else if (operator !== "" && firstNumber !== "") {
+      secondNumber = displayValue;
+      const result = operate(operator, Number(firstNumber), Number(secondNumber));
+      displayValue = String(result);
+      document.getElementById("display").textContent = displayValue;
+      firstNumber = displayValue;
+      operator = selectedOperator;
+      clearDisplay();
+    }
+  }
 
 //event listeners to digit
 const numberButtons = document.querySelectorAll('.digit');
