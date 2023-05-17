@@ -14,3 +14,5 @@ i already have the display so once 'operate()' has been called  it update the di
 then adding event listeners on the button.
 
 I noticed that multiple calcule was not handeling by the calculator so i rework the code to make multiple operation to work such as 12 + 7 - 5 * 3 = should be 42 !
+
+Updating the code, now we can type digits and operator with the keyboard
