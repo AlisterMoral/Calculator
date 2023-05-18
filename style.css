@@ -1,36 +1,64 @@
 .calculator {
-    width: 200px;
-    margin: 20px auto;
-    padding: 10px;
-    border: 1px solid #ccc;
-    text-align: center;
-  }
-  
-  .display {
-    height: 30px;
-    line-height: 30px;
-    background-color: #f8f8f8;
-    margin-bottom: 10px;
-  }
-  
-  .button-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .button-container button {
-    width: 40px;
-    height: 40px;
-    margin: 2px;
-  }
-  
-  .equals-btn {
-    background-color: #5cb85c;
-    color: #fff;
-  }
-  
-  .clear-btn {
-    background-color: #d9534f;
-    color: #fff;
-  }
+  width: 200px;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid #00ff00;
+  text-align: center;
+  background-color: #000;
+  color: #00ff00;
+  font-family: "Courier New", monospace;
+}
+
+.display {
+  height: 30px;
+  line-height: 30px;
+  background-color: #222;
+  margin-bottom: 10px;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.button-container button {
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+  background-color: #000;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  border-radius: 50%;
+  font-size: 16px;
+}
+
+.equals-btn {
+  background-color: #ff00ff;
+  color: #000;
+}
+
+.clear-btn {
+  background-color: #ff0000;
+  color: #000;
+}
+
+.digit {
+  background-color: #333;
+  color: #00ff00;
+}
+
+.operator {
+  background-color: #f9c74f;
+  color: #000;
+}
+
+.decimal-btn {
+  background-color: #333;
+  color: #00ff00;
+}
+
+.backspace-btn {
+  background-color: #333;
+  color: #00ff00;
+}

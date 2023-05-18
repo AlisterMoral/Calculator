@@ -16,3 +16,11 @@ then adding event listeners on the button.
 I noticed that multiple calcule was not handeling by the calculator so i rework the code to make multiple operation to work such as 12 + 7 - 5 * 3 = should be 42 !
 
 Updating the code, now we can type digits and operator with the keyboard
+
+Finnaly finish the calculator by adding 2 more button the backspace  and the decimal button , i updated the handleNumberClick function to handle decimal input.
+
+Created function  and variable for the decimal buttons with the logic to handle the decimal button and disable it if a decimal point is already present in the display 
+
+adding the backspace button so you can delete the presedent digits, then updated the clearDisplay function to enable the decimal button when the display is cleared.
+
+And at this end finishing by doing a good old css matrix style green and black 

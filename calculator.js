@@ -45,10 +45,26 @@ function updateDisplay(number) {
 function clearDisplay() {
   displayValue = "";
   document.getElementById("display").textContent = "";
+  decimalButton.disabled = false;
 }
 
 function handleNumberClick(number) {
+  if (number === '.' && displayValue.includes('.')) {
+    return; // Do not allow multiple decimal points
+  }
   updateDisplay(number);
+}
+
+function handleBackspaceClick() {
+  displayValue = displayValue.slice(0, -1);
+  document.getElementById("display").textContent = displayValue;
+}
+
+function handleDecimalClick() {
+  if (!displayValue.includes('.')) {
+    updateDisplay('.');
+  }
+  decimalButton.disabled = true;
 }
 
 function handleEqualClick() {
@@ -151,6 +167,7 @@ document.addEventListener("keydown", (event) => {
       handleOperatorClick(key);
       break;
     case "Enter":
+      event.preventDefault(); 
       handleEqualClick();
       break;
     case "Backspace":
@@ -159,5 +176,18 @@ document.addEventListener("keydown", (event) => {
     default:
       break;
   }
+}); 
+
+// event listener for decimal button
+const decimalButton = document.getElementById("decimal-btn");
+decimalButton.addEventListener("click", () => {
+  handleDecimalClick();
 });
+
+// event listener for backspace button
+const backspaceButton = document.getElementById("backspace-btn");
+backspaceButton.addEventListener("click", () => {
+  handleBackspaceClick();
+});
+
 
