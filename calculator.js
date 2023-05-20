@@ -73,19 +73,6 @@ function handleEqualClick() {
     const result = operate(operator, Number(firstNumber), Number(secondNumber));
     displayValue = String(result);
     document.getElementById("display").textContent = displayValue;
-    firstNumber = displayValue;
-    operator = "";
-    secondNumber = "";
-    newCalculation = true;
-  }
-}
-
-function handleEqualClick() {
-  if (operator !== "" && firstNumber !== "" && displayValue !== "") {
-    secondNumber = displayValue;
-    const result = operate(operator, Number(firstNumber), Number(secondNumber));
-    displayValue = String(result);
-    document.getElementById("display").textContent = displayValue;
     firstNumber = "";
     operator = "";
     secondNumber = "";
