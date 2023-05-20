@@ -1,5 +1,5 @@
 .calculator {
-  width: 200px;
+  width: 300px; /* Adjust the width as desired */
   margin: 20px auto;
   padding: 10px;
   border: 1px solid #00ff00;
@@ -10,8 +10,8 @@
 }
 
 .display {
-  height: 30px;
-  line-height: 30px;
+  height: 40px; /* Adjust the height as desired */
+  line-height: 40px; /* Adjust the line-height as desired */
   background-color: #222;
   margin-bottom: 10px;
 }
@@ -23,14 +23,14 @@
 }
 
 .button-container button {
-  width: 40px;
-  height: 40px;
+  width: 60px; /* Adjust the width as desired */
+  height: 60px; /* Adjust the height as desired */
   margin: 2px;
   background-color: #000;
   color: #00ff00;
   border: 1px solid #00ff00;
   border-radius: 50%;
-  font-size: 16px;
+  font-size: 20px; /* Adjust the font-size as desired */
 }
 
 .equals-btn {
